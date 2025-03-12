@@ -1,0 +1,20 @@
+dataset:
+  name: CICIDS
+  label_level: Application
+  per_class: 1000
+  pkt_num: 3
+  window_t: 10
+
+model:
+  name: FT-GCN
+  hidden: 32
+  heads: 2
+
+train:
+  exp: AC
+  lr: 0.01
+  epochs: 300
+  label_ratio: 0.8
+  device: cuda
+  log_dir: runs/logs
+  save_dir: runs/
