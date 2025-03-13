@@ -8,7 +8,7 @@ dataset:
   window_t: 10
 
 model:
-  name: FT-GCN
+  name: FIR-GNN
   hidden: 32
   heads: 2
 
