@@ -183,18 +183,15 @@ def count_parameters(model):
 
 def main():
     parser = argparse.ArgumentParser(description="GNN Training")
-
     parser.add_argument("--config", type=str, default="configs/default.yaml",
                         help="Config file path")
-    parser.add_argument("--graph_dir", type=str, required=True,
-                        help="Graph file path")
 
     args = parser.parse_args()
 
     with open(args.config) as f:
         config = yaml.safe_load(f)
 
-    processor = DataProcessor(config, args.graph_dir)
+    processor = DataProcessor(config)
     node_data, edge_data = processor.load_data()
     pyg_data, num_classes = processor.create_pyg_data(node_data, edge_data)
 

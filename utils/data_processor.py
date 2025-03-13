@@ -17,7 +17,7 @@ import torch
 class DataProcessor:
     def __init__(self, config: Dict, graph: str):
         self.config = config
-        self.graph_path = graph
+        self.graph_path = config['dataset']['processed_dir']
         self.drop_columns = ['index', 'Flow ID', 'Src IP', 'Src Port', 'Dst IP', 'Dst Port', 'Protocol', 'Timestamp', 'Function',
                 'Application', 'Pkt Len']
         self.selected_features = []

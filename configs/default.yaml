@@ -1,5 +1,7 @@
 dataset:
   name: CICIDS
+  dataset_dir: data/CSV/CICIDS/
+  processed_dir: data/Graph/CICIDS/
   label_level: Application
   per_class: 1000
   pkt_num: 3
@@ -16,5 +18,3 @@ train:
   epochs: 300
   label_ratio: 0.8
   device: cuda
-  log_dir: runs/logs
-  save_dir: runs/

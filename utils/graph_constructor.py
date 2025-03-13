@@ -8,10 +8,10 @@ from tqdm import tqdm
 
 
 class GraphConstructor:
-    def __init__(self, config: Dict, dataset_dir, processed_dir):
+    def __init__(self, config):
         self.config = config['dataset']
-        self.dataset_dir = dataset_dir
-        self.processed_dir = processed_dir
+        self.dataset_dir = config['dataset']['dataset_dir']
+        self.processed_dir = config['dataset']['processed_dir']
         self.scaler = MinMaxScaler()
         self.label_encoder = LabelEncoder()
 
